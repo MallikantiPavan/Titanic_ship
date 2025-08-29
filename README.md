@@ -33,7 +33,7 @@ Titanic_ship/
 
 ```
 
-⚙️ Installation & Setup (Local)
+<h3>⚙️ Installation & Setup (Local)</h3>
 
 1️⃣ Clone the repository
 bash
@@ -88,16 +88,16 @@ Copy code
   "probability": 0.18
 }
 
-🎨 Frontend (Streamlit)
+<h4>🎨 Frontend (Streamlit)</h4>
 The Streamlit UI allows users to:
 
 Select passenger class, age, sex, and other features
 
 Get prediction on whether the passenger survived
 
-Deployed app: Streamlit Titanic App
+<h4>Deployed app: Streamlit Titanic App</h4>
 
-📊 Screenshots
+<h3>📊 Screenshots</h3>
 <p align="center"> <img src="./screenshots/backend.png" alt="FastAPI Docs" width="45%" /> <img src="./screenshots/frontend.png" alt="Streamlit UI" width="45%" /> </p>
 🚀 Deployment
 
@@ -105,7 +105,7 @@ Backend → Hosted on Render (uvicorn main:app --host 0.0.0.0 --port 8081)
 
 Frontend → Hosted on Streamlit Cloud
 
-📊 Model
+<h3>📊 Model</h3>
 
 Algorithm: Logistic Regression
 
@@ -113,25 +113,7 @@ Trained on Titanic dataset (Kaggle)
 
 Features: Passenger Class, Age, SibSp, Parch, Fare, Sex, Embarked
 
-yaml
-Copy code
-
----
-
-✅ Fixes I made:
-- Properly **closed all `bash` and `json` code blocks**.  
-- Added horizontal rules `---` between sections.  
-- Fixed indentation in folder structure.  
-- Cleaned up repeated "bash / Copy code" text.  
-
-👉 Now this will render correctly on GitHub.  
-
-Do you also want me to include the **third screenshot (GitHub repo `.devcontainer` view)** at the bottom in the screenshots section?
 
 
 
 
-
-
-
-Ask ChatGPT
