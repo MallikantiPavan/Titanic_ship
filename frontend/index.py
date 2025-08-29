@@ -30,7 +30,7 @@ if st.button("Predict"):
         "Embarked_S": Embarked_S
     }
     
-    response = requests.post("http://127.0.0.1:8000/predict", json=passenger_data)
+    response = requests.post("https://titanic-ship.onrender.com/predict", json=passenger_data)
     
     if response.status_code == 200:
         result = response.json()
