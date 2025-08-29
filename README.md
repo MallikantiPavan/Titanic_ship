@@ -30,12 +30,17 @@ Titanic_ship/
 │   └── requirements.txt    # Dependencies for frontend
 └── .devcontainer/
     └── devcontainer.json   # Development container configuration
+
+```
+
 ⚙️ Installation & Setup (Local)
+
 1️⃣ Clone the repository
 bash
 Copy code
 git clone https://github.com/your-username/Titanic_ship.git
 cd Titanic_ship
+
 2️⃣ Setup Backend (FastAPI)
 bash
 Copy code
@@ -47,6 +52,7 @@ Backend will be live at:
 👉 /docs for Swagger UI
 
 3️⃣ Setup Frontend (Streamlit)
+
 bash
 Copy code
 cd ../frontend
@@ -81,6 +87,7 @@ Copy code
   "survived": 0,
   "probability": 0.18
 }
+
 🎨 Frontend (Streamlit)
 The Streamlit UI allows users to:
 
@@ -91,13 +98,15 @@ Get prediction on whether the passenger survived
 Deployed app: Streamlit Titanic App
 
 📊 Screenshots
-<p align="center"> <img src="./screenshots/fastapi_docs.png" alt="FastAPI Docs" width="45%" /> <img src="./screenshots/streamlit_ui.png" alt="Streamlit UI" width="45%" /> </p>
+<p align="center"> <img src="./screenshots/backend.png" alt="FastAPI Docs" width="45%" /> <img src="./screenshots/frontend.png" alt="Streamlit UI" width="45%" /> </p>
 🚀 Deployment
+
 Backend → Hosted on Render (uvicorn main:app --host 0.0.0.0 --port 8081)
 
 Frontend → Hosted on Streamlit Cloud
 
 📊 Model
+
 Algorithm: Logistic Regression
 
 Trained on Titanic dataset (Kaggle)
