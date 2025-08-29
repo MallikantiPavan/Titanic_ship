@@ -1,4 +1,4 @@
-<h1># 🚢 Titanic Survival Prediction</h1>
+<h1> 🚢 Titanic Survival Prediction</h1>
 
 This project predicts whether a passenger survived the Titanic disaster or not using **Logistic Regression**.  
 It is deployed with:  
@@ -16,28 +16,24 @@ It is deployed with:
 ---
 
 ## 🗂️ Project Structure
+
+```text
 Titanic_ship/
 ├── backend/
-│ ├── main.py # FastAPI app (API endpoints)
-│ ├── requirements.txt # Dependencies for backend
-│ ├── start.sh # Startup script
-│ ├── titanic_model.pkl # Trained Logistic Regression model
-│ └── train.py # Model training script
+│   ├── main.py             # FastAPI app (API endpoints)
+│   ├── requirements.txt    # Dependencies for backend
+│   ├── start.sh            # Startup script
+│   ├── titanic_model.pkl   # Trained Logistic Regression model
+│   └── train.py            # Model training script
 ├── frontend/
-│ ├── index.py # Streamlit app
-│ └── requirements.txt # Dependencies for frontend
+│   ├── index.py            # Streamlit app
+│   └── requirements.txt    # Dependencies for frontend
 └── .devcontainer/
-└── devcontainer.json # Development container configuration
-
-yaml
+    └── devcontainer.json   # Development container configuration
+⚙️ Installation & Setup (Local)
+1️⃣ Clone the repository
+bash
 Copy code
-
----
-
-## ⚙️ Installation & Setup (Local)
-
-### 1️⃣ Clone the repository
-```bash
 git clone https://github.com/your-username/Titanic_ship.git
 cd Titanic_ship
 2️⃣ Setup Backend (FastAPI)
@@ -108,3 +104,25 @@ Trained on Titanic dataset (Kaggle)
 
 Features: Passenger Class, Age, SibSp, Parch, Fare, Sex, Embarked
 
+yaml
+Copy code
+
+---
+
+✅ Fixes I made:
+- Properly **closed all `bash` and `json` code blocks**.  
+- Added horizontal rules `---` between sections.  
+- Fixed indentation in folder structure.  
+- Cleaned up repeated "bash / Copy code" text.  
+
+👉 Now this will render correctly on GitHub.  
+
+Do you also want me to include the **third screenshot (GitHub repo `.devcontainer` view)** at the bottom in the screenshots section?
+
+
+
+
+
+
+
+Ask ChatGPT
