@@ -54,7 +54,24 @@ if st.button("Predict"):
     if response.status_code == 200:
         result = response.json()
         pred = result['prediction']
-        if pred == 0:
-            st.warning(f"Not Survived, probability: {result['probability']}")
+        if pred != 0:
+            st.markdown(
+                f"""
+                <div style='background-color: #2ecc71; padding: 10px; border-radius: 8px; color: white; font-weight: bold;'>
+                    ✅ Survived<br>
+                     Probability: {result['probability']}%
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
         else:
-            st.success(f"Survived, probability: {result['probability']}")
+            
+            st.markdown(
+                f"""
+                <div style='background-color: red; padding: 10px; border-radius: 8px; color: black; font-weight: bold;'>
+                    ⚠️ Not Survived<br>
+                    Probability: {result['probability']}%
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
