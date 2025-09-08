@@ -1,6 +1,25 @@
-
 import streamlit as st
 import requests
+
+st.set_page_config(page_title="Titanic Survival Prediction", layout="centered")
+
+# Set background first
+image_url = "https://w0.peakpx.com/wallpaper/430/476/HD-wallpaper-titanic-ships-titanic-1012-titanic-sunk-in-1912-artwork-art.jpg"
+
+st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url("{image_url}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 st.title("Titanic Survival Prediction")
 
@@ -13,7 +32,7 @@ Fare = st.number_input("Fare", 0.0, 500.0)
 Sex = st.selectbox("Sex", ["female", "male"])
 Embarked = st.selectbox("Embarked", ["C", "Q", "S"])
 
-# Convert categorical inputs to match one-hot encoding
+# Convert categorical inputs
 Sex_male = 1 if Sex == "male" else 0
 Embarked_Q = 1 if Embarked == "Q" else 0
 Embarked_S = 1 if Embarked == "S" else 0
@@ -34,19 +53,8 @@ if st.button("Predict"):
     
     if response.status_code == 200:
         result = response.json()
-        pred=result['prediction']
-        if pred==0:
-            st.warning(f"Not Survived,probability:{result['probability']}")
-        elif pred==1:
-            st.success(f'Survived,probability:{result["probability"]}')
-       
-image_url=("https://w0.peakpx.com/wallpaper/430/476/HD-wallpaper-titanic-ships-titanic-1012-titanic-sunk-in-1912-artwork-art.jpg")
-
-pic=f"""
-<style>
-st.App{{
-background-image:("{image_url}");
-
-}}
-</style>"""
-st.markdown(pic,unsafe_allow_html=True)
+        pred = result['prediction']
+        if pred == 0:
+            st.warning(f"Not Survived, probability: {result['probability']}")
+        else:
+            st.success(f"Survived, probability: {result['probability']}")
