@@ -4,7 +4,7 @@ import requests
 st.set_page_config(page_title="Titanic Survival Prediction", layout="centered")
 
 # Set background first
-image_url = "https://i.etsystatic.com/44876642/r/il/a11a15/5087359548/il_570xN.5087359548_6lmc.jpg"
+image_url = "https://media.istockphoto.com/id/503132519/photo/titanic-and-iceberg.jpg?s=612x612&w=0&k=20&c=cO71OMKsceiSj07heG1jhOiNRNGevD-XrACWis2RdQ4="
 
 st.markdown(
     f"""
@@ -28,7 +28,7 @@ Pclass = st.selectbox("Passenger Class", [1, 2, 3])
 Age = st.number_input("Age", 0, 100)
 SibSp = st.number_input("Siblings/Spouses aboard", 0, 10)
 Parch = st.number_input("Parents/Children aboard", 0, 10)
-Fare = st.number_input("Fare", 0.0, 500.0)
+Fare = st.number_input("Fare", 0.0, 10000.0)
 Sex = st.selectbox("Sex", ["female", "male"])
 Embarked = st.selectbox("Embarked", ["C", "Q", "S"])
 
