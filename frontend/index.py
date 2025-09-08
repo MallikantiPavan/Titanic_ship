@@ -40,3 +40,13 @@ if st.button("Predict"):
         elif pred==1:
             st.success(f'Survived,probability:{result["probability"]}')
        
+image_url=("https://w0.peakpx.com/wallpaper/430/476/HD-wallpaper-titanic-ships-titanic-1012-titanic-sunk-in-1912-artwork-art.jpg")
+
+pic=f"""
+<style>
+st.App{{
+background-image:("{image_url}");
+
+}}
+</style>"""
+st.markdown(pic,unsafe_allow_html=True)
