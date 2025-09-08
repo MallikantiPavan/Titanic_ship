@@ -4,7 +4,7 @@ import requests
 st.set_page_config(page_title="Titanic Survival Prediction", layout="centered")
 
 # Set background first
-image_url = "https://i.pinimg.com/736x/50/65/eb/5065eb21b848e80fa3a837e29d7f290e.jpg"
+image_url = "https://i.etsystatic.com/44876642/r/il/a11a15/5087359548/il_570xN.5087359548_6lmc.jpg"
 
 st.markdown(
     f"""
