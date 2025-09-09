@@ -49,29 +49,35 @@ if st.button("Predict"):
         "Embarked_S": Embarked_S
     }
     
-    response = requests.post("https://titanic-ship.onrender.com/predict", json=passenger_data)
     
-    if response.status_code == 200:
+    
+    try:
+        response = requests.post("https://titanic-ship.onrender.com/predict", json=passenger_data)
+        response.raise_for_status()
         result = response.json()
-        pred = result['prediction']
-        if pred != 0:
+        prob = round(result["probability"] , 2) if isinstance(result["probability"], float) else result["probability"]
+        pred = result["prediction"]
+
+        if pred == 0:
             st.markdown(
                 f"""
-                <div style='background-color: #2ecc71; padding: 10px; border-radius: 8px; color: white; font-weight: bold;'>
-                    ✅ Survived<br>
-                     Probability: {result['probability']}%
-                </div>
-                """,
-                unsafe_allow_html=True
-            )
-        else:
-            
-            st.markdown(
-                f"""
-                <div style='background-color: red; padding: 10px; border-radius: 8px; color: black; font-weight: bold;'>
+                <div style='background-color: #e74c3c; padding: 13px; border-radius: 10px; color: white; font-weight: bold; font-size: 15px;'>
                     ⚠️ Not Survived<br>
-                    Probability: {result['probability']}%
+                    Probability: {prob}%
                 </div>
                 """,
                 unsafe_allow_html=True
             )
+        elif pred == 1:
+            st.markdown(
+                f"""
+                <div style='background-color: #2ecc71; padding: 13px; border-radius: 10px; color: white; font-weight: bold; font-size: 15px;'>
+                    ✅ Survived<br>
+                    Probability: {prob}%
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+
+    except requests.exceptions.RequestException as e:
+        st.error(f"❌ API request failed: {e}")
