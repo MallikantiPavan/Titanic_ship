@@ -60,7 +60,7 @@ if st.button("Predict"):
         result = response.json()
 
         # Format probability as percentage
-        prob = round(result["probability"] * 100, 2) if isinstance(result["probability"], float) else result["probability"]
+        prob = round(result["probability"] , 2) if isinstance(result["probability"], float) else result["probability"]
         pred = result["prediction"]
 
         if pred == 0:
