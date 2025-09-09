@@ -25,10 +25,10 @@ st.title("Titanic Survival Prediction")
 
 # User input
 Pclass = st.selectbox("Passenger Class", [1, 2, 3])
-Age = st.number_input("Age", 0, 100)
+Age = st.number_input("Age", 0, 100,30)
 SibSp = st.number_input("Siblings/Spouses aboard", 0, 10)
 Parch = st.number_input("Parents/Children aboard", 0, 10)
-Fare = st.number_input("Fare", 0.0, 10000.0)
+Fare = st.number_input("Fare", 0.0, 10000.0,1000)
 Sex = st.selectbox("Sex", ["female", "male"])
 Embarked = st.selectbox("Embarked", ["C", "Q", "S"])
 
