@@ -98,7 +98,7 @@ Get prediction on whether the passenger survived
 <h4>Deployed app: Streamlit Titanic App</h4>
 
 <h3>📊 Screenshots</h3>
-<p align="center"> <img src="./screenshots/backend.png" alt="FastAPI Docs" width="45%" /> <img src="./screenshots/frontend.png" alt="Streamlit UI" width="45%" /> </p>
+<p align="center"> <img src="./screenshots/backend.png" alt="FastAPI Docs" width="45%" /> <img src="./screenshots/frontend1.png" alt="Streamlit UI" width="45%" /> </p>
 🚀 Deployment
 
 Backend → Hosted on Render (uvicorn main:app --host 0.0.0.0 --port 8081)
